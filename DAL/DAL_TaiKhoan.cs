@@ -13,7 +13,7 @@ namespace DAL
         private KetNoiData connect = new KetNoiData();
         public string LayPass(string us)
         {
-            return connect.GetValue(@"select MatKhau from tblTaiKhoan where MaNV = '" + us + "'");
+            return connect.GetValue(@"select MatKhau from tblTaiKhoan where MaNV = '" + us +   "'");
         }
 
         public string LayLoatTK(string us)
