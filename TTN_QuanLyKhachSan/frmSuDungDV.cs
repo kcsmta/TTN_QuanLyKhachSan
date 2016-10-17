@@ -26,6 +26,7 @@ namespace TTN_QuanLyKhachSan
         private bool _them = false;
         private bool _xoa = false;
         private bool _koload = true;
+        private string _Gia;
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (!_chon)
@@ -100,10 +101,12 @@ namespace TTN_QuanLyKhachSan
             EC_SuDung.MaDV = cboDichVu.SelectedValue.ToString();
             EC_SuDung.MaHD = txtHoaDon.Text;
 
-            dtpThoiGian.Value = Convert.ToDateTime(labNgay.Text);
-            EC_SuDung.ThoiGian = dtpThoiGian.Value;         
+            dtpThoiGian.Text = labNgay.Text;
+            //EC_SuDung.ThoiGian = dtpThoiGian.Text + " " + labGio.Text;
+            EC_SuDung.ThoiGian = dtpThoiGian.Value;
+            EC_SuDung.Gia = _Gia;
 
-            DAL_SuDung.addSuDung(EC_SuDung);//ok
+            DAL_SuDung.addSuDung(EC_SuDung);
             dgvDanhSach.DataSource = DAL_SuDung.getDanhSach();
             _them = false;
             btnLuu.Enabled = false;
@@ -180,6 +183,15 @@ namespace TTN_QuanLyKhachSan
             dk = "and TenDV like N'%" + txtTimDV.Text + "%'";
             if (txtTimPhong.Text != "") dk += " and SoPhong like '%" + txtTimPhong.Text + "%'";
             dgvDanhSach.DataSource = DAL_SuDung.getDanhSach(dk);
+        }
+
+        private void cboDichVu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (_koload && cboDichVu.SelectedValue != null)
+            {
+                DAL_DichVu DV = new DAL_DichVu();
+                _Gia = DV.GetGia(cboDichVu.SelectedValue.ToString());
+            }
         }
     }
 }

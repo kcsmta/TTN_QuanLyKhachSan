@@ -14,7 +14,7 @@ namespace DAL
 
         public DataTable getDanhSach()
         {
-            return connect.GetDataTable(@"select SoPhong, TenDV,ThoiGian,Gia,tblHoaDon.MaHD from tblPhong,tblPhieuThue,tblHoaDon,tblSuDungDV,tblDichVu where tblPhong.MaPh = tblPhieuThue.MaPh and tblPhieuThue.MaPhieu = tblHoaDon.MaPhieuThue and tblHoaDon.MaHD = tblSuDungDV.MaHD and tblSuDungDV.MaDV = tblDichVu.MaDV order by SoPhong,ThoiGian");
+            return connect.GetDataTable(@"select SoPhong, TenDV,ThoiGian, tblSuDungDV.Gia,tblHoaDon.MaHD from tblPhong,tblPhieuThue,tblHoaDon,tblSuDungDV,tblDichVu where tblPhong.MaPh = tblPhieuThue.MaPh and tblPhieuThue.MaPhieu = tblHoaDon.MaPhieuThue and tblHoaDon.MaHD = tblSuDungDV.MaHD and tblSuDungDV.MaDV = tblDichVu.MaDV order by SoPhong,ThoiGian");
         }
         public DataTable getDanhSach(string dk)
         {
@@ -23,7 +23,7 @@ namespace DAL
 
         public void addSuDung(EC_SuDungDichVu EC_SuDung)
         {
-            connect.ThucHienLenh(@"insert into tblSuDungDV(MaHD,MaDV,ThoiGian) values('" + EC_SuDung.MaHD + "','" + EC_SuDung.MaDV + "','" + EC_SuDung.ThoiGian + "')");
+            connect.ThucHienLenh(@"insert into tblSuDungDV(MaHD,MaDV,ThoiGian,Gia) values('" + EC_SuDung.MaHD + "','" + EC_SuDung.MaDV + "','" + EC_SuDung.ThoiGian + "', '" + EC_SuDung.Gia + "')");
         }
 
         public void delSuDung(EC_SuDungDichVu EC_SuDung)

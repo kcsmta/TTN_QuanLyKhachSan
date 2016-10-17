@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.lstDanhSachNV = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnXoaTT = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnXoaTK = new System.Windows.Forms.Button();
+            this.btnThemTK = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
@@ -52,10 +56,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tltChuThich = new System.Windows.Forms.ToolTip(this.components);
-            this.btnXoaTT = new System.Windows.Forms.Button();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnXoaTK = new System.Windows.Forms.Button();
-            this.btnThemTK = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -69,7 +69,7 @@
             this.lstDanhSachNV.Location = new System.Drawing.Point(585, 0);
             this.lstDanhSachNV.Margin = new System.Windows.Forms.Padding(4);
             this.lstDanhSachNV.Name = "lstDanhSachNV";
-            this.lstDanhSachNV.Size = new System.Drawing.Size(161, 409);
+            this.lstDanhSachNV.Size = new System.Drawing.Size(218, 378);
             this.lstDanhSachNV.TabIndex = 0;
             this.lstDanhSachNV.SelectedIndexChanged += new System.EventHandler(this.lstDanhSachNV_SelectedIndexChanged);
             // 
@@ -84,8 +84,56 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(585, 409);
+            this.panel1.Size = new System.Drawing.Size(585, 378);
             this.panel1.TabIndex = 1;
+            // 
+            // btnXoaTT
+            // 
+            this.btnXoaTT.AccessibleDescription = "";
+            this.btnXoaTT.Location = new System.Drawing.Point(455, 272);
+            this.btnXoaTT.Name = "btnXoaTT";
+            this.btnXoaTT.Size = new System.Drawing.Size(123, 58);
+            this.btnXoaTT.TabIndex = 8;
+            this.btnXoaTT.Text = "Xóa thông tin";
+            this.btnXoaTT.UseVisualStyleBackColor = true;
+            this.btnXoaTT.Click += new System.EventHandler(this.btnXoaTT_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.AccessibleDescription = "";
+            this.btnLuu.Enabled = false;
+            this.btnLuu.Location = new System.Drawing.Point(455, 209);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(123, 54);
+            this.btnLuu.TabIndex = 8;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // btnXoaTK
+            // 
+            this.btnXoaTK.AccessibleDescription = "";
+            this.btnXoaTK.Enabled = false;
+            this.btnXoaTK.Location = new System.Drawing.Point(455, 76);
+            this.btnXoaTK.Name = "btnXoaTK";
+            this.btnXoaTK.Size = new System.Drawing.Size(123, 46);
+            this.btnXoaTK.TabIndex = 10;
+            this.btnXoaTK.Text = "Xóa tài khoản";
+            this.btnXoaTK.UseVisualStyleBackColor = true;
+            this.btnXoaTK.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnThemTK
+            // 
+            this.btnThemTK.AccessibleDescription = "";
+            this.btnThemTK.AccessibleName = "";
+            this.btnThemTK.Enabled = false;
+            this.btnThemTK.Location = new System.Drawing.Point(455, 21);
+            this.btnThemTK.Name = "btnThemTK";
+            this.btnThemTK.Size = new System.Drawing.Size(123, 49);
+            this.btnThemTK.TabIndex = 9;
+            this.btnThemTK.Text = "Thêm tài khoản";
+            this.btnThemTK.UseVisualStyleBackColor = true;
+            this.btnThemTK.Click += new System.EventHandler(this.btnThemTK_Click);
             // 
             // groupBox2
             // 
@@ -103,7 +151,7 @@
             this.groupBox2.Controls.Add(this.txtHoTen);
             this.groupBox2.Location = new System.Drawing.Point(12, 128);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(417, 270);
+            this.groupBox2.Size = new System.Drawing.Size(417, 242);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin cá nhân";
@@ -123,7 +171,7 @@
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDiaChi.Size = new System.Drawing.Size(231, 65);
+            this.txtDiaChi.Size = new System.Drawing.Size(231, 40);
             this.txtDiaChi.TabIndex = 7;
             this.txtDiaChi.TextChanged += new System.EventHandler(this.txtHoTen_TextChanged);
             // 
@@ -287,61 +335,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã nhân viên";
             // 
-            // btnXoaTT
-            // 
-            this.btnXoaTT.AccessibleDescription = "";
-            this.btnXoaTT.Image = global::TTN_QuanLyKhachSan.Properties.Resources.btnEdit_Image;
-            this.btnXoaTT.Location = new System.Drawing.Point(455, 285);
-            this.btnXoaTT.Name = "btnXoaTT";
-            this.btnXoaTT.Size = new System.Drawing.Size(105, 43);
-            this.btnXoaTT.TabIndex = 8;
-            this.btnXoaTT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnXoaTT.UseVisualStyleBackColor = true;
-            this.btnXoaTT.Click += new System.EventHandler(this.btnXoaTT_Click);
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.AccessibleDescription = "";
-            this.btnLuu.Enabled = false;
-            this.btnLuu.Image = global::TTN_QuanLyKhachSan.Properties.Resources.btnSave_Image;
-            this.btnLuu.Location = new System.Drawing.Point(455, 210);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(105, 49);
-            this.btnLuu.TabIndex = 8;
-            this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLuu.UseVisualStyleBackColor = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // btnXoaTK
-            // 
-            this.btnXoaTK.AccessibleDescription = "";
-            this.btnXoaTK.Enabled = false;
-            this.btnXoaTK.Image = global::TTN_QuanLyKhachSan.Properties.Resources.btnDel_Image;
-            this.btnXoaTK.Location = new System.Drawing.Point(455, 80);
-            this.btnXoaTK.Name = "btnXoaTK";
-            this.btnXoaTK.Size = new System.Drawing.Size(105, 42);
-            this.btnXoaTK.TabIndex = 10;
-            this.btnXoaTK.UseVisualStyleBackColor = true;
-            this.btnXoaTK.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnThemTK
-            // 
-            this.btnThemTK.AccessibleDescription = "";
-            this.btnThemTK.AccessibleName = "";
-            this.btnThemTK.Enabled = false;
-            this.btnThemTK.Image = global::TTN_QuanLyKhachSan.Properties.Resources.btnAdd_Image;
-            this.btnThemTK.Location = new System.Drawing.Point(455, 22);
-            this.btnThemTK.Name = "btnThemTK";
-            this.btnThemTK.Size = new System.Drawing.Size(105, 45);
-            this.btnThemTK.TabIndex = 9;
-            this.btnThemTK.UseVisualStyleBackColor = true;
-            this.btnThemTK.Click += new System.EventHandler(this.btnThemTK_Click);
-            // 
             // frmQuanLyNguoiDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(746, 409);
+            this.ClientSize = new System.Drawing.Size(803, 378);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lstDanhSachNV);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

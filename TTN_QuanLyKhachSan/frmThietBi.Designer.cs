@@ -135,7 +135,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(23, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(758, 149);
+            this.groupBox1.Size = new System.Drawing.Size(782, 149);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin thiết bị";
@@ -145,7 +145,7 @@
             this.pictureBox1.Image = global::TTN_QuanLyKhachSan.Properties.Resources.BuffetThang1_4;
             this.pictureBox1.Location = new System.Drawing.Point(318, 16);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(391, 123);
+            this.pictureBox1.Size = new System.Drawing.Size(449, 123);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;

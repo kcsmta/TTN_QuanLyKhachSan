@@ -29,8 +29,8 @@ namespace Entity
             set { _GioiTinh = value; }
         }
 
-        private string _NgaySinh;
-        public string NgaySinh
+        private DateTime _NgaySinh;
+        public DateTime NgaySinh
         {
             get { return _NgaySinh; }
             set { _NgaySinh = value; }

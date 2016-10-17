@@ -26,3 +26,17 @@ F:\Study\TTN\QLKS\DAL\bin\Debug\Entity.pdb
 F:\Study\TTN\QLKS\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 F:\Study\TTN\QLKS\DAL\obj\Debug\DAL.dll
 F:\Study\TTN\QLKS\DAL\obj\Debug\DAL.pdb
+F:\Study\TTN_Khong_duoc_dong_vao\QLKS\DAL\bin\Debug\DAL.dll
+F:\Study\TTN_Khong_duoc_dong_vao\QLKS\DAL\bin\Debug\DAL.pdb
+F:\Study\TTN_Khong_duoc_dong_vao\QLKS\DAL\bin\Debug\Entity.dll
+F:\Study\TTN_Khong_duoc_dong_vao\QLKS\DAL\bin\Debug\Entity.pdb
+F:\Study\TTN_Khong_duoc_dong_vao\QLKS\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+F:\Study\TTN_Khong_duoc_dong_vao\QLKS\DAL\obj\Debug\DAL.dll
+F:\Study\TTN_Khong_duoc_dong_vao\QLKS\DAL\obj\Debug\DAL.pdb
+C:\Users\Khanh.Ng\Desktop\TTN_Khong_duoc_dong_vao\QLKS\DAL\bin\Debug\DAL.dll
+C:\Users\Khanh.Ng\Desktop\TTN_Khong_duoc_dong_vao\QLKS\DAL\bin\Debug\DAL.pdb
+C:\Users\Khanh.Ng\Desktop\TTN_Khong_duoc_dong_vao\QLKS\DAL\bin\Debug\Entity.dll
+C:\Users\Khanh.Ng\Desktop\TTN_Khong_duoc_dong_vao\QLKS\DAL\bin\Debug\Entity.pdb
+C:\Users\Khanh.Ng\Desktop\TTN_Khong_duoc_dong_vao\QLKS\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Khanh.Ng\Desktop\TTN_Khong_duoc_dong_vao\QLKS\DAL\obj\Debug\DAL.dll
+C:\Users\Khanh.Ng\Desktop\TTN_Khong_duoc_dong_vao\QLKS\DAL\obj\Debug\DAL.pdb

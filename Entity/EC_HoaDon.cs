@@ -22,16 +22,16 @@ namespace Entity
             get { return _MaPhieuThue; }
             set { _MaPhieuThue = value; }
         }
-        private string _NgayVao;
+        private DateTime _NgayVao;
 
-        public string NgayVao
+        public DateTime NgayVao
         {
             get { return _NgayVao; }
             set { _NgayVao = value; }
         }
-        private string _NgayRa;
+        private DateTime _NgayRa;
 
-        public string NgayRa
+        public DateTime NgayRa
         {
             get { return _NgayRa; }
             set { _NgayRa = value; }
@@ -42,6 +42,13 @@ namespace Entity
         {
             get { return _ThanhTien; }
             set { _ThanhTien = value; }
+        }
+
+        private string _Gia;
+        public string Gia
+        {
+            get { return _Gia; }
+            set { _Gia = value; }
         }
     }
 }

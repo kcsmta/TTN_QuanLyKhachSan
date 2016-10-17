@@ -113,6 +113,7 @@ namespace TTN_QuanLyKhachSan
             }
             if (_them)
             {
+                //btnDoiMK.Enabled = false;
                 EC_TK.MaNV = txtMaNV.Text;
                 EC_TK.MatKhau = txtPass.Text;
                 if (chkAD.Checked) EC_TK.LoaiTK = "1";
@@ -129,8 +130,8 @@ namespace TTN_QuanLyKhachSan
                 EC_NV.DiaChi = txtDiaChi.Text;
                 EC_NV.SoDT = txtSoDT.Text;
                 EC_NV.CMND = txtCMND.Text;
-                if (_suangs) EC_NV.NgaySinh = dtpNgaySinh.Text;
-                else EC_NV.NgaySinh = "";
+                EC_NV.NgaySinh = dtpNgaySinh.Value;
+               
                 DAL_NV.ThemThongTin(EC_NV);
             }
             else
@@ -143,8 +144,8 @@ namespace TTN_QuanLyKhachSan
                 EC_NV.DiaChi = txtDiaChi.Text;
                 EC_NV.SoDT = txtSoDT.Text;
                 EC_NV.CMND = txtCMND.Text;
-                if (_suangs) EC_NV.NgaySinh = dtpNgaySinh.Text;
-                else EC_NV.NgaySinh = "";
+                EC_NV.NgaySinh = dtpNgaySinh.Value;
+                
                 DAL_NV.SuaThongTin(EC_NV);
                 //update tt tai khoan
                 EC_TK.MaNV = txtMaNV.Text;
@@ -153,6 +154,7 @@ namespace TTN_QuanLyKhachSan
                 DAL_TK.DoiLoai(EC_TK);
             }
             btnLuu.Enabled = false;
+            MessageBox.Show("Thêm thành công!");
             _them = false;
             _suangs = false;
         }

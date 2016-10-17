@@ -35,5 +35,10 @@ namespace DAL
         {
             return connect.GetDataTable(@"SELECT * FROM tblPhong " + DieuKien);
         }
+
+        public void TraPhong(EC_Phong EC_Ph)
+        {
+            connect.ThucHienLenh("update tblPhong set TrangThai = N'" + EC_Ph.TrangThai + "'  where MaPh = '" + EC_Ph.MaPh + "'");
+        }
     }
 }

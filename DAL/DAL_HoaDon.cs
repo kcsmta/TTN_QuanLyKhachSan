@@ -20,7 +20,7 @@ namespace DAL
 
         public void ThemThongTin(EC_HoaDon EC_HD)
         {
-            connect.ThucHienLenh("insert into tblHoaDon(MaHD, MaPhieuThue, NgayVao, NgayRa, ThanhTien) values(N'" + EC_HD.MaHD + "', N'" + EC_HD.MaPhieuThue + "', '" + EC_HD.NgayVao + "', '" + EC_HD.NgayRa + "', '" + EC_HD.ThanhTien +"') ");
+            connect.ThucHienLenh("insert into tblHoaDon(MaHD, MaPhieuThue, NgayVao, NgayRa, ThanhTien, DonGiaHT) values(N'" + EC_HD.MaHD + "', N'" + EC_HD.MaPhieuThue + "', '" + EC_HD.NgayVao + "', '" + EC_HD.NgayRa + "', '" + EC_HD.ThanhTien +"', " + EC_HD.Gia.ToString() + ") ");
         }
 
         public void SuaThongTin(EC_HoaDon EC_HD)
@@ -35,29 +35,12 @@ namespace DAL
 
         public DataTable ThongTinThanhToan(string maHd)
         {
-            DataTable tb = connect.GetDataTable(@"select t.TenKH, t.MaPh, t.SoPhong, t.MaKH, t.MaPhieu, t.TenPT, t.DonGia, t.MaHD, t.NgayVao, t.NgayRa, t.ThanhTien , v.MaDV, v.ThoiGian, v.TenDV, v.Gia
-from (select p.MaPh, p.SoPhong, k.MaKH, k.TenKH, pt.MaPhieu,ptt.TenPT, ptt.DonGia, h.MaHD, h.NgayVao, h.NgayRa, h.ThanhTien 
-	  from tblPhong p,tblPhieuThue pt,tblKhachHang k,tblPhuongThucThue ptt,tblHoaDon h
-	  where p.MaPh = pt.MaPh and pt.MaPhieu = h.MaPhieuThue and k.MaKH = pt.MaKH
-	  and ptt.MaPT = pt.MaPT and h.MaPhieuThue = pt.MaPhieu and h.ThanhTien = 0 and h.MaHD  = '" + maHd + @"')  t 
-left join (select s.MaHD,s.MaDV, s.ThoiGian, d.TenDV, d.Gia 
-		   from tblSuDungDV s, tblDichVu d 
-		   where s.MaDV=d.MaDV ) v
-on	t.MaHD = v.MaHD ");
-            return tb;
+            return connect.GetDataTable(@"select SoPhong, TenDV,ThoiGian, tblSuDungDV.Gia from tblPhong,tblPhieuThue,tblHoaDon,tblSuDungDV,tblDichVu where tblPhong.MaPh = tblPhieuThue.MaPh and tblPhieuThue.MaPhieu = tblHoaDon.MaPhieuThue and tblHoaDon.MaHD = tblSuDungDV.MaHD and tblSuDungDV.MaDV = tblDichVu.MaDV and tblHoaDon.MaHD = '" + maHd + "' order by SoPhong,ThoiGian");
         }
-        public DataTable ThongTinThanhToanKH(string maKh)
+
+        public void ThanhToan(EC_HoaDon EC_HD)
         {
-            DataTable tb = connect.GetDataTable(@"select t.TenKH, t.MaPh, t.SoPhong, t.MaKH, t.MaPhieu, t.TenPT, t.DonGia, t.MaHD, t.NgayVao, t.NgayRa, t.ThanhTien , v.MaDV, v.ThoiGian, v.TenDV, v.Gia
-from (select p.MaPh, p.SoPhong, k.MaKH, k.TenKH, pt.MaPhieu, ptt.TenPT, ptt.DonGia, h.MaHD, h.NgayVao, h.NgayRa, h.ThanhTien 
-	  from tblPhong p,tblPhieuThue pt,tblKhachHang k,tblPhuongThucThue ptt,tblHoaDon h
-	  where p.MaPh = pt.MaPh and pt.MaPhieu = h.MaPhieuThue and k.MaKH = pt.MaKH
-	  and ptt.MaPT = pt.MaPT and h.MaPhieuThue = pt.MaPhieu and h.ThanhTien = 0 and k.MaKH = '" + maKh + @"' )  t 
-left join (select s.MaHD,s.MaDV, s.ThoiGian, d.TenDV, d.Gia 
-		   from tblSuDungDV s, tblDichVu d 
-		   where s.MaDV=d.MaDV) v
-on	t.MaHD = v.MaHD ");
-            return tb;
+            connect.ThucHienLenh("update tblHoaDon set ThanhTien = " + EC_HD.ThanhTien + " where MaHD = '" + EC_HD.MaHD + "'");
         }
     }
 }

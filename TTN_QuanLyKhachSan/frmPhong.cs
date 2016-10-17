@@ -130,7 +130,7 @@ namespace TTN_QuanLyKhachSan
             if (txtMaPhong.Text == "" || txtSoPhong.Text == "" || txtTrangThai.Text == "" )
             {
                 MessageBox.Show("Xin mời nhập thông tin đầy đủ");
-                KhoaChucNang();
+                //KhoaChucNang();
                 return;
             }
             else

@@ -184,5 +184,10 @@ namespace TTN_QuanLyKhachSan
             }
 
         }
+
+        private void barButtonItem9_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Help.ShowHelp(this, "HelpKhachSan.chm");
+        }
     }
 }

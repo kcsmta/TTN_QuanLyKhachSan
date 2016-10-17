@@ -42,5 +42,10 @@ namespace DAL
         {
             return connect.GetDataTable(@"select * from tblDichVu where " + dk);
         }
+
+        public string GetGia(string MaDV)
+        {
+            return connect.GetValue("Select Gia from tblDichVu where MaDV = '" + MaDV +"'");
+        }
     }
 }

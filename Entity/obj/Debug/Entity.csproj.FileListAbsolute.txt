@@ -8,3 +8,8 @@ F:\Study\TTN\QLKS\Entity\bin\Debug\Entity.pdb
 F:\Study\TTN\QLKS\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache
 F:\Study\TTN\QLKS\Entity\obj\Debug\Entity.dll
 F:\Study\TTN\QLKS\Entity\obj\Debug\Entity.pdb
+C:\Users\Khanh.Ng\Desktop\TTN_Khong_duoc_dong_vao\QLKS\Entity\bin\Debug\Entity.dll
+C:\Users\Khanh.Ng\Desktop\TTN_Khong_duoc_dong_vao\QLKS\Entity\bin\Debug\Entity.pdb
+C:\Users\Khanh.Ng\Desktop\TTN_Khong_duoc_dong_vao\QLKS\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache
+C:\Users\Khanh.Ng\Desktop\TTN_Khong_duoc_dong_vao\QLKS\Entity\obj\Debug\Entity.dll
+C:\Users\Khanh.Ng\Desktop\TTN_Khong_duoc_dong_vao\QLKS\Entity\obj\Debug\Entity.pdb

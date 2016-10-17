@@ -75,7 +75,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(747, 240);
+            this.panel1.Size = new System.Drawing.Size(829, 240);
             this.panel1.TabIndex = 3;
             // 
             // pictureBox1
@@ -83,7 +83,7 @@
             this.pictureBox1.Image = global::TTN_QuanLyKhachSan.Properties.Resources._303_Khach_hang_toan_thang_cycles;
             this.pictureBox1.Location = new System.Drawing.Point(591, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 215);
+            this.pictureBox1.Size = new System.Drawing.Size(226, 215);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -305,7 +305,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 240);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(747, 144);
+            this.panel2.Size = new System.Drawing.Size(829, 144);
             this.panel2.TabIndex = 4;
             // 
             // dgvKhachHang
@@ -331,7 +331,7 @@
             this.dgvKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvKhachHang.Location = new System.Drawing.Point(0, 0);
             this.dgvKhachHang.Name = "dgvKhachHang";
-            this.dgvKhachHang.Size = new System.Drawing.Size(747, 144);
+            this.dgvKhachHang.Size = new System.Drawing.Size(829, 144);
             this.dgvKhachHang.TabIndex = 12;
             this.dgvKhachHang.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellClick);
             // 
@@ -384,7 +384,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(747, 384);
+            this.ClientSize = new System.Drawing.Size(829, 384);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

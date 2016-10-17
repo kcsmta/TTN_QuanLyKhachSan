@@ -40,7 +40,9 @@
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.txtTimMa = new System.Windows.Forms.ToolStripTextBox();
             this.txtTimTen = new System.Windows.Forms.ToolStripTextBox();
+            this.btnReset = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -52,13 +54,11 @@
             this.txtTen = new System.Windows.Forms.TextBox();
             this.txtMa = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnReset = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvDanhSach
@@ -82,7 +82,7 @@
             this.dgvDanhSach.Location = new System.Drawing.Point(0, 0);
             this.dgvDanhSach.Name = "dgvDanhSach";
             this.dgvDanhSach.RowHeadersWidth = 37;
-            this.dgvDanhSach.Size = new System.Drawing.Size(779, 145);
+            this.dgvDanhSach.Size = new System.Drawing.Size(863, 145);
             this.dgvDanhSach.TabIndex = 9;
             this.dgvDanhSach.TabStop = false;
             this.dgvDanhSach.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSach_CellEnter);
@@ -122,7 +122,7 @@
             this.btnReset});
             this.toolStrip1.Location = new System.Drawing.Point(0, 164);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(779, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(863, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -146,6 +146,16 @@
             this.txtTimTen.Tag = "";
             this.txtTimTen.TextChanged += new System.EventHandler(this.txtTimTen_TextChanged);
             // 
+            // btnReset
+            // 
+            this.btnReset.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnReset.Image = ((System.Drawing.Image)(resources.GetObject("btnReset.Image")));
+            this.btnReset.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(39, 22);
+            this.btnReset.Text = "Reset";
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.pictureBox1);
@@ -163,8 +173,18 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(779, 189);
+            this.panel1.Size = new System.Drawing.Size(863, 189);
             this.panel1.TabIndex = 4;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TTN_QuanLyKhachSan.Properties.Resources.service_hotel_imperial_vienna_f_13637930733868;
+            this.pictureBox1.Location = new System.Drawing.Point(488, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(363, 138);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // btnLuu
             // 
@@ -265,34 +285,14 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 189);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(779, 145);
+            this.panel2.Size = new System.Drawing.Size(863, 145);
             this.panel2.TabIndex = 10;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::TTN_QuanLyKhachSan.Properties.Resources.service_hotel_imperial_vienna_f_13637930733868;
-            this.pictureBox1.Location = new System.Drawing.Point(488, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(264, 138);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnReset
-            // 
-            this.btnReset.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnReset.Image = ((System.Drawing.Image)(resources.GetObject("btnReset.Image")));
-            this.btnReset.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(39, 22);
-            this.btnReset.Text = "Reset";
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // frmQuanLyDV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 334);
+            this.ClientSize = new System.Drawing.Size(863, 334);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -305,8 +305,8 @@
             this.toolStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

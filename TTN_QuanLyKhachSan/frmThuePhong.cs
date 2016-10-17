@@ -19,7 +19,9 @@ namespace TTN_QuanLyKhachSan
         EC_PhieuThue ecPT = new EC_PhieuThue();
         EC_HoaDon ecHD = new EC_HoaDon();
         DAL_HoaDon dalHD = new DAL_HoaDon();
-        
+        private string _Gia;
+        private bool _load;
+
         public frmThuePhong()
         {
             InitializeComponent();
@@ -35,20 +37,21 @@ namespace TTN_QuanLyKhachSan
 
         private void frmThuePhong_Load(object sender, EventArgs e)
         {
+            _load = true;
             DateTime date = DateTime.Today.AddDays(0);
             dtpNgayvao.Value = date;
             //load dgvThongTin
             DataTable tb = dalPh.ThongTinPhong("");
             dgvThongtin.DataSource = tb;
-            for(int i = 0; i<dgvThongtin.RowCount; i++)
-            {
-                dgvThongtin.Rows[i].Cells["STT"].Value  = i+1;
-                if (dgvThongtin.Rows[i].Cells["TrangThai"].Value.ToString() == "Tốt") dgvThongtin.Rows[i].DefaultCellStyle.BackColor = Color.Lime;
-                else
-                    if (dgvThongtin.Rows[i].Cells["TrangThai"].Value.ToString() == "Đã thuê") dgvThongtin.Rows[i].DefaultCellStyle.BackColor = Color.LightSkyBlue;
-                    else
-                        if (dgvThongtin.Rows[i].Cells["TrangThai"].Value.ToString() == "Hỏng") dgvThongtin.Rows[i].DefaultCellStyle.BackColor = Color.Red;
-            }
+            //for(int i = 0; i<dgvThongtin.RowCount; i++)
+            //{
+            //    dgvThongtin.Rows[i].Cells["STT"].Value  = i+1;
+            //    if (dgvThongtin.Rows[i].Cells["TrangThai"].Value.ToString() == "Tốt") dgvThongtin.Rows[i].DefaultCellStyle.BackColor = Color.Lime;
+            //    else
+            //        if (dgvThongtin.Rows[i].Cells["TrangThai"].Value.ToString() == "Đã thuê") dgvThongtin.Rows[i].DefaultCellStyle.BackColor = Color.LightSkyBlue;
+            //        else
+            //            if (dgvThongtin.Rows[i].Cells["TrangThai"].Value.ToString() == "Hỏng") dgvThongtin.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+            //}
             //load smbKhachhang
             tb = cn.GetDataTable("Select distinct MaKH, tenKH from tblKhachHang");
             cmbKhachhang.DataSource = tb;
@@ -56,15 +59,17 @@ namespace TTN_QuanLyKhachSan
             txtMaKH.Text = findCode(cmbKhachhang.Text, "TenKH", "MaKH", tb);
             
             //load Phuongthuc
-            tb = cn.GetDataTable("Select distinct MaPT, tenPT from tblPhuongThucThue");
+            tb = cn.GetDataTable("Select distinct MaPT, TenPT from tblPhuongThucThue");
             cmbPhuongthuc.DataSource = tb;
-            cmbPhuongthuc.DisplayMember= "tenPT";
+            cmbPhuongthuc.DisplayMember= "TenPT";
+            cmbPhuongthuc.ValueMember = "MaPT";
+            cmbPhuongthuc.ResetText();
             txtMaPT.Text = findCode(cmbPhuongthuc.Text, "TenPT", "MaPT", tb);
 
             //lay dl vao ec
-            
-            ecHD.NgayVao = date.ToShortDateString();
-            
+
+            ecHD.NgayVao = dtpNgayvao.Value;
+            _load = false;
         }
 
         private void cmbKhachhang_SelectedIndexChanged(object sender, EventArgs e)
@@ -105,7 +110,6 @@ namespace TTN_QuanLyKhachSan
                     DateTime date = DateTime.Now;
                     ecPT.MaPhieu = date.Day.ToString() + date.Month.ToString() + date.Hour.ToString() + date.Minute.ToString() + date.Second.ToString() + dgvThongtin.Rows[i].Cells["SoPhong"].Value.ToString();
 
-                    //thu hien CSDL bi loi o day
                     DAL_PhieuThue dalPhieuthue = new DAL_PhieuThue();
                     dalPhieuthue.ThemThongTin(ecPT);
 
@@ -118,8 +122,9 @@ namespace TTN_QuanLyKhachSan
                     ecHD.MaHD = ecPT.MaPhieu;
                     ecHD.MaPhieuThue = ecPT.MaPhieu;
                     ecHD.ThanhTien = "0";
-                    if (ckcChuabiet.Checked == false) ecHD.NgayRa = dtpNgayra.Value.ToShortDateString();
-                    else ecHD.NgayRa = "";
+                    ecHD.Gia = _Gia;
+                    ecHD.NgayRa = dtpNgayra.Value;
+                    
                     dalHD.ThemThongTin(ecHD);
                 }
             }
@@ -127,43 +132,51 @@ namespace TTN_QuanLyKhachSan
 
             DataTable tb = dalPh.ThongTinPhong("");
             dgvThongtin.DataSource = tb;
-
-            for (int i = 0; i < dgvThongtin.RowCount; i++)
-            {
-                dgvThongtin.Rows[i].Cells["STT"].Value = i + 1;
-                if (dgvThongtin.Rows[i].Cells["TrangThai"].Value.ToString() == "Tốt") dgvThongtin.Rows[i].DefaultCellStyle.BackColor = Color.Lime;
-                else
-                    if (dgvThongtin.Rows[i].Cells["TrangThai"].Value.ToString() == "Đã thuê") dgvThongtin.Rows[i].DefaultCellStyle.BackColor = Color.LightSkyBlue;
-                    else
-                        if (dgvThongtin.Rows[i].Cells["TrangThai"].Value.ToString() == "Hỏng") dgvThongtin.Rows[i].DefaultCellStyle.BackColor = Color.Red;
-            }
+            //for (int i = 0; i < dgvThongtin.RowCount; i++)
+            //{
+            //    dgvThongtin.Rows[i].Cells["STT"].Value = i + 1;
+            //    if (dgvThongtin.Rows[i].Cells["TrangThai"].Value.ToString() == "Tốt") dgvThongtin.Rows[i].DefaultCellStyle.BackColor = Color.Lime;
+            //    else
+            //        if (dgvThongtin.Rows[i].Cells["TrangThai"].Value.ToString() == "Đã thuê") dgvThongtin.Rows[i].DefaultCellStyle.BackColor = Color.LightSkyBlue;
+            //        else
+            //            if (dgvThongtin.Rows[i].Cells["TrangThai"].Value.ToString() == "Hỏng") dgvThongtin.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+            //}
         }
 
         private void cmbPhuongthuc_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable tb = cn.GetDataTable("Select distinct MaPT, tenPT from tblPhuongThucThue");
-            txtMaPT.Text = findCode(cmbPhuongthuc.Text, "TenPT", "MaPT", tb);
+            if (!_load)
+            {
+                _Gia = cn.GetValue("select DonGia from tblPhuongThucThue where MaPT = '" + cmbPhuongthuc.SelectedValue.ToString() + "'");
+            }
+            txtMaPT.Text = findCode(cmbPhuongthuc.Text, "TenPT", "MaPT", tb);  
             if (cmbPhuongthuc.Text == "Qua đêm")
             {
                 DateTime dateOut = dtpNgayvao.Value;
                 dateOut = dateOut.AddDays(1);
                 dtpNgayra.Value = dateOut;
-                ecHD.NgayRa = dateOut.ToShortDateString();
                 dtpNgayra.Enabled = false;
-                ckcChuabiet.Enabled = false;
+                ecHD.NgayRa = dtpNgayra.Value;
+                
             }
             else
             {
                 dtpNgayra.Enabled = true;
-                ckcChuabiet.Enabled = true;
+                
             }
 
         }
 
         private void ckcChuabiet_CheckedChanged(object sender, EventArgs e)
         {
-            if (ckcChuabiet.Checked == false) ecHD.NgayRa = dtpNgayra.Value.ToShortDateString();
-            else ecHD.NgayRa = "";
+           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DataTable tb = dalPh.ThongTinPhong("");
+            dgvThongtin.DataSource = tb;
         }
     }
 }
