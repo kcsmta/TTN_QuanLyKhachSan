@@ -11,7 +11,7 @@ namespace Entity
         private string _MaKH;
         public string MaKH
         {
-            get { return _MaKH; }
+            get { return _MaKH;   }
             set { _MaKH = value; }
         }
         private string _TenKH;
