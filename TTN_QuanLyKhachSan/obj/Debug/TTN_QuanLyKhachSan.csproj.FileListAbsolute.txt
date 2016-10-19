@@ -105,3 +105,6 @@ F:\Study\QLKS_ToUpGit\QLKS\TTN_QuanLyKhachSan\bin\Debug\DAL.dll
 F:\Study\QLKS_ToUpGit\QLKS\TTN_QuanLyKhachSan\bin\Debug\Entity.dll
 F:\Study\QLKS_ToUpGit\QLKS\TTN_QuanLyKhachSan\bin\Debug\DAL.pdb
 F:\Study\QLKS_ToUpGit\QLKS\TTN_QuanLyKhachSan\bin\Debug\Entity.pdb
+D:\GitHub\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\bin\Debug\TTN_QuanLyKhachSan.exe.config
+D:\GitHub\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\obj\Debug\TTN_QuanLyKhachSan.exe
+D:\GitHub\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\obj\Debug\TTN_QuanLyKhachSan.pdb
