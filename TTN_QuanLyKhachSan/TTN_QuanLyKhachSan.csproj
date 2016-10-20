@@ -67,6 +67,12 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThuePhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThuePhong.Designer.cs">
+      <DependentUpon>frmThuePhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDangNhap.resx">
