@@ -33,3 +33,10 @@ F:\Study\QLKS_ToUpGit\QLKS\DAL\bin\Debug\Entity.pdb
 F:\Study\QLKS_ToUpGit\QLKS\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 F:\Study\QLKS_ToUpGit\QLKS\DAL\obj\Debug\DAL.dll
 F:\Study\QLKS_ToUpGit\QLKS\DAL\obj\Debug\DAL.pdb
+D:\GitHub\TTN_QuanLyKhachSan\DAL\bin\Debug\DAL.dll
+D:\GitHub\TTN_QuanLyKhachSan\DAL\bin\Debug\DAL.pdb
+D:\GitHub\TTN_QuanLyKhachSan\DAL\bin\Debug\Entity.dll
+D:\GitHub\TTN_QuanLyKhachSan\DAL\bin\Debug\Entity.pdb
+D:\GitHub\TTN_QuanLyKhachSan\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\GitHub\TTN_QuanLyKhachSan\DAL\obj\Debug\DAL.dll
+D:\GitHub\TTN_QuanLyKhachSan\DAL\obj\Debug\DAL.pdb
