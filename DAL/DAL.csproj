@@ -39,7 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="DAL_HoaDon.cs" />
+=======
+>>>>>>> refs/remotes/origin/Doan-Thieu
     <Compile Include="DAL_Phong.cs" />
     <Compile Include="DAL_TaiKhoan.cs" />
     <Compile Include="KetNoiData.cs" />
