@@ -106,6 +106,7 @@ F:\Study\QLKS_ToUpGit\QLKS\TTN_QuanLyKhachSan\bin\Debug\Entity.dll
 F:\Study\QLKS_ToUpGit\QLKS\TTN_QuanLyKhachSan\bin\Debug\DAL.pdb
 F:\Study\QLKS_ToUpGit\QLKS\TTN_QuanLyKhachSan\bin\Debug\Entity.pdb
 <<<<<<< HEAD
+<<<<<<< HEAD
 D:\GitHub\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\bin\Debug\TTN_QuanLyKhachSan.exe.config
 D:\GitHub\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\obj\Debug\TTN_QuanLyKhachSan.exe
 D:\GitHub\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\obj\Debug\TTN_QuanLyKhachSan.pdb
@@ -139,3 +140,8 @@ D:\github\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\obj\Debug\TTN_QuanLyKhachSan.Pro
 D:\github\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\obj\Debug\TTN_QuanLyKhachSan.csproj.GenerateResource.Cache
 D:\github\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\obj\Debug\TTN_QuanLyKhachSan.exe.licenses
 >>>>>>> refs/remotes/origin/Doan-Thieu
+=======
+D:\GitHub\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\bin\Debug\TTN_QuanLyKhachSan.exe.config
+D:\GitHub\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\obj\Debug\TTN_QuanLyKhachSan.exe
+D:\GitHub\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\obj\Debug\TTN_QuanLyKhachSan.pdb
+>>>>>>> refs/remotes/origin/PhanDuy
