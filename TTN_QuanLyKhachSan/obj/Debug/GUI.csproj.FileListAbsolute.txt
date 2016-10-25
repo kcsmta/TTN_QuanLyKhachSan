@@ -1,0 +1,3 @@
+F:\Study\QLKS\TTN_QuanLyKhachSan\bin\Debug\TTN_QuanLyKhachSan.exe.config
+F:\Study\QLKS\TTN_QuanLyKhachSan\obj\Debug\TTN_QuanLyKhachSan.exe
+F:\Study\QLKS\TTN_QuanLyKhachSan\obj\Debug\TTN_QuanLyKhachSan.pdb

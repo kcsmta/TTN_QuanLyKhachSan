@@ -16,7 +16,7 @@ namespace TTN_QuanLyKhachSan
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmThuePhong());
+            Application.Run(new frmDangNhap());
         }
     }
 }

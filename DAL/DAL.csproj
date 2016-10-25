@@ -39,22 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+    <Compile Include="DAL_DichVu.cs" />
     <Compile Include="DAL_HoaDon.cs" />
-=======
->>>>>>> refs/remotes/origin/Doan-Thieu
-    <Compile Include="DAL_Phong.cs" />
-=======
     <Compile Include="DAL_KhachHang.cs" />
->>>>>>> refs/remotes/origin/cuopemveday
-=======
-    <Compile Include="DAL_HoaDon.cs" />
+    <Compile Include="DAL_NhanVien.cs" />
     <Compile Include="DAL_PhieuThue.cs" />
     <Compile Include="DAL_Phong.cs" />
->>>>>>> refs/remotes/origin/Max
+    <Compile Include="DAL_SuDungDichVu.cs" />
     <Compile Include="DAL_TaiKhoan.cs" />
+    <Compile Include="DAL_ThietBi.cs" />
     <Compile Include="KetNoiData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
